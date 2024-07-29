@@ -1,0 +1,59 @@
+.header,.nav,.main,.sidber,.advertics,footer{
+    background-color: aqua;
+    border: 2px solid yellowgreen;
+    padding: 20px;
+    border-radius: 10px;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area: main;
+}
+.sidber{
+    grid-area: sidber;
+}
+.advertics{
+    grid-area: advertics;
+}
+.footer{
+    grid-area: footer;
+}
+.container{
+ display: grid;
+grid-template-areas:
+"header header header header"
+"nav main main sidber"
+"nav main main advertics"
+"footer footer footer footer"
+;
+gap: 10px;}
+
+
+/* small device */
+@media screen and (max-width:576px) {
+    .container{
+        display: grid;
+       grid-template-areas:
+       "header"
+       "nav"
+       " main"
+       " sidber"
+       "advertics"
+       "footer"
+       ;
+    gap: 10px;} 
+}
+/* mediam device */
+
+@media screen and (min-width:576px) and (max-width:992px) {
+        .container{
+            grid-template-areas:" header header header"
+            "nav nav nav"
+            "sidber main main"
+            "advertics footer footer"
+        }
+}
