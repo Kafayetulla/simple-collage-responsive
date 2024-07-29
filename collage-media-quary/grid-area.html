@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:repeat(3,1fr);
+            gap: 20px;
+        }
+        .box{
+            background-color: salmon;
+        }
+        #box-1,#box-6{
+            grid-column:span 3;
+            padding: 10px;
+            border: 2px solid salmon;
+            border-radius: 5px;
+        }
+        #box-2{
+            grid-row:span 2;
+            padding: 10px;
+            border: 2px solid salmon;
+            border-radius: 5px;
+        }
+        .nav{
+            margin-left: 500px;
+        }
+        #box-3{
+            grid-row: span 2;
+            padding: 10px;
+            border: 2px solid salmon;
+            border-radius: 5px;
+        }
+        div>a{
+            display: block;
+        }
+        #box-4,#box-5{
+            padding: 10px;
+            border: 2px solid salmon;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>.box#box-$*6  -->
+    <div class="container">
+        <div class="box" id="box-1">The header</div>
+        <div class="box" id="box-2">
+            <ul class="nav">
+                <li><a href="" >Nav1</a></li>
+                <li><a href="" >Nav2</a></li>
+                <li><a href="">Nav3</a></li>
+            </ul>
+        </div>
+        <div class="box" id="box-3">
+            <article>
+                <h1>Main Article 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus unde, laborum delectus sit quod eos, veniam, assumenda saepe fugiat error adipisci accusantium exercitationem harum. Alias minima excepturi sequi numquam obcaecati!</p>
+            </article>
+            <article>
+                <h1>Main Article 1</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus unde, laborum delectus sit quod eos, veniam, assumenda saepe fugiat error adipisci accusantium exercitationem harum. Alias minima excepturi sequi numquam obcaecati!</p>
+            </article>
+        </div>
+        <div class="box" id="box-4"> Sidebar </div>
+        <div class="box" id="box-5">Advertise</div>
+        <div class="box" id="box-6">The Footer</div>
+    </div>
+</body>
+</html>
